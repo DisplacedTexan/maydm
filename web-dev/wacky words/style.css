@@ -2,10 +2,14 @@ body {
   margin-top: 20px;
 }
 
-.hidden {
-  display: none;
+label {
+  width: 30%;
 }
 
-.d-flex {
-  flex-wrap: wrap;
+input {
+  width: 50%;
+}
+
+.hidden {
+  display: none;
 }
