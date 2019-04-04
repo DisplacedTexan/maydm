@@ -1,14 +1,15 @@
 /*
   document.getElementById(ELEMENT_ID) is how we access the HTML on the page.
-  These three variables are used to manipulate the HTML by showing or hiding pieces.
-
+  These variables are used to manipulate the HTML by showing or hiding pieces.
 */
 var storyDiv = document.getElementById("theStory");
 var wordsDiv = document.getElementById("words");
 var form = document.getElementById("wordInput");
+var resetButton = document.getElementById("reset");
 
 function tellStory() {
   // Here, we are getting the value of the input element by the ID.
+  // Get the value of all of the other variables in the same way.
   var name = document.getElementById("name").value;
   var place = document.getElementById("place").value;
   var number = document.getElementById("number").value;
@@ -36,24 +37,30 @@ function tellStory() {
   storyDiv.innerHTML = story;
 
   wordsDiv.classList.add("hidden");
+  resetButton.classList.remove("hidden");
 }
 
-function checkNumber(number, time) {
-  // parseInt turns the string received into an actual number
-  number = parseInt(number);
-
-  if (number !== 1 && time.slice(-1) != "s") {
-    // if number is NOT 1 and the unit of time does NOT end in s, add an s
-    time += "s";
-  } else if (number === 1 && time.slice(-1) == "s") {
-    // if the number is 1 & the unit of time DOES end in s, remove it
-    time = time.slice(0, -1);
+function checkNumber(number, word) {
+  if (number == 1 && word.slice(-1) != "s") {
+    // if number is NOT 1 and the word does NOT end in s, add an s
+    word += "s";
+  } else if (number == 1 && word.slice(-1) == "s") {
+    // if the number is 1 & the word DOES end in s, remove it
+    word = word.slice(0, -1);
   }
 
-  // The time variable needs to be returned because it might have changed.
-  return time;
+  // The word needs to be returned because it might have changed.
+  return word;
 }
 
 function resetStory() {
+  /*
+    This function resets the inputs back to blank and shows the inputs, and it
+    hides the story and the reset button.
+  */
   form.reset();
+  wordsDiv.classList.remove("hidden");
+
+  storyDiv.classList.add("hidden");
+  resetButton.classList.add("hidden");
 }
