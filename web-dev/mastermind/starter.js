@@ -19,16 +19,16 @@ var guessesElement = document.getElementById("guesses");
 var gameResultElement = document.getElementById("gameResult");
 
 function createCode() {
-  // Answer is assigned as an empty array
+  // answer is an empty array
   answer = [];
 
-  // This loop grabs four numbers from the possibleNumbers array to create the code
+  // this loop gets four numbers from possibleNumbers to create the answer
   for (var i = 0; i < 4; i++) {
     // get the index of one of the numbers from possibleNumbers array
     let random = getRandomInt(possibleNumbers.length);
     // add that number to the answers array
     answer.push(possibleNumbers[random]);
-    // remove that number from possibleNumbers array (so no duplicates)
+    // remove that number from possibleNumbers array
     possibleNumbers.splice([random], 1);
   }
 }
@@ -51,22 +51,22 @@ function checkGuess() {
   guess2 = parseInt(document.getElementById("guess2").value);
   guess3 = parseInt(document.getElementById("guess3").value);
 
-  /*
-    These three variables will be used to count correct numbers;
-    number existing in the answer but in the wrong spot;
-    or just plain wrong numbers.
-    Because they are declared within the function, they will reset
-    every time the checkGuess function runs.
-  */
+  //  These three variables will be used to count correct numbers;
+  //  number existing in the answer but in the wrong spot;
+  //  or just plain wrong numbers.
+  //  Because they are declared within the function, they will reset
+  //  every time the checkGuess function runs.
+
   var correctNumber = 0;
   var presentNumber = 0;
   var wrongNumber = 0;
 
-  if (guess0 == answer[0]) {
+  if (guess0 === answer[0]) {
     // if the 1st number in the guess matches the 1st number in the answer,
     // add 1 to correctNumber
     correctNumber++;
   } else if (answer.indexOf(guess0) > 0) {
+    // indexOf checks the answer array to see if 1st number is there
     // if the 1st number is in the answer, add 1 to presentNumber
     presentNumber++;
   } else {
@@ -74,29 +74,7 @@ function checkGuess() {
     wrongNumber++;
   }
 
-  if (guess1 == answer[1]) {
-    correctNumber++;
-  } else if (answer.indexOf(guess1) > 0) {
-    presentNumber++;
-  } else {
-    wrongNumber++;
-  }
-
-  if (guess2 == answer[2]) {
-    correctNumber++;
-  } else if (answer.indexOf(guess2) > 0) {
-    presentNumber++;
-  } else {
-    wrongNumber++;
-  }
-
-  if (guess3 == answer[3]) {
-    correctNumber++;
-  } else if (answer.indexOf(guess3) > 0) {
-    presentNumber++;
-  } else {
-    wrongNumber++;
-  }
+  /* Write if/else if/else statements to check the remaining numbers. */
 
   // Reset the inputs.
   inputs.reset();
@@ -136,14 +114,6 @@ function checkResults(correct, present, wrong) {
     results += correctHTML.repeat(correct);
   }
 
-  if (present > 0) {
-    results += presentHTML.repeat(present);
-  }
-
-  if (wrong > 0) {
-    results += wrongHTML.repeat(wrong);
-  }
-
   return results;
 }
 
@@ -173,9 +143,6 @@ function addGuessToPage(results) {
     the showGameResults function. Pass in the winner variable when you call the
     showGameResults function.
   */
-  if (guessCount === 10) {
-    showGameResults(winner);
-  }
 }
 
 function showGameResults(result) {
@@ -189,14 +156,7 @@ function showGameResults(result) {
     Losing code: gameResultElement.insertAdjacentHTML("beforeend", "<h2>Better luck next time!</h2>");
   */
 
-  if (result) {
-    gameResultElement.insertAdjacentHTML("beforeend", "<h2>You won!</h2>");
-  } else {
-    gameResultElement.insertAdjacentHTML(
-      "beforeend",
-      "<h2>Better luck next time!</h2>"
-    );
-  }
+  // Write if/else statement here.
 
   // show reset button
   reset.classList.remove("hidden");
@@ -204,7 +164,7 @@ function showGameResults(result) {
   submit.classList.add("hidden");
   instructions.classList.add("hidden");
 
-  // show the numbers in their order
+  // show the answer code in order
   document.getElementById("guess0").value = answer[0];
   document.getElementById("guess1").value = answer[1];
   document.getElementById("guess2").value = answer[2];
@@ -212,6 +172,7 @@ function showGameResults(result) {
 }
 
 function resetGame() {
+  // reset the inputs to blanks
   inputs.reset();
   // hide the reset button
   reset.classList.add("hidden");
@@ -219,14 +180,13 @@ function resetGame() {
   submit.classList.remove("hidden");
   instructions.classList.remove("hidden");
 
-  // remove last game's guesses
+  // remove last game's guesses & result
   guessesElement.innerHTML = "";
-  // remove last game's result
   gameResultElement.innerHTML = "";
 
   // reset winner to false
   winner = false;
-  // reset possible numbers to all
+  // reset possible numbers to 1-6
   possibleNumbers = [1, 2, 3, 4, 5, 6];
   // create a new code
   createCode();
