@@ -21,8 +21,18 @@
         <input class="guess" type="text" id="guess2" />
         <input class="guess" type="text" id="guess3" />
       </form>
+      <button
+        class="btn btn-success"
+        id="submitGuess"
+        onClick="checkGuess(); return false;"
+      >
+        Submit Guess
+      </button>
       <div id="guesses"></div>
     </div>
     <script src="script.js" charset="utf-8"></script>
+    <script>
+      window.onload = createCode();
+    </script>
   </body>
 </html>
