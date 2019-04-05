@@ -13,21 +13,33 @@
   </head>
   <body>
     <div class="container">
-      <h1>Mastermind</h1>
-      <form id="guessInputs">
-        <h2>Guess a combination using numbers 1-6</h2>
-        <input class="guess" type="text" id="guess0" />
-        <input class="guess" type="text" id="guess1" />
-        <input class="guess" type="text" id="guess2" />
-        <input class="guess" type="text" id="guess3" />
-      </form>
-      <button
-        class="btn btn-success"
-        id="submitGuess"
-        onClick="checkGuess(); return false;"
-      >
-        Submit Guess
-      </button>
+      <h1 class="text-center">Mastermind</h1>
+      <h2 class="text-center">Guess a combination using numbers 1-6</h2>
+      <div id="userInputs" class="d-flex">
+        <form id="guessInputs" class="d-flex">
+          <input class="guess" type="text" id="guess0" />
+          <input class="guess" type="text" id="guess1" />
+          <input class="guess" type="text" id="guess2" />
+          <input class="guess" type="text" id="guess3" />
+        </form>
+        <div class="inputButtons">
+          <button
+            class="btn btn-success"
+            id="submitButton"
+            onClick="checkGuess(); return false;"
+          >
+            Submit Guess
+          </button>
+          <button
+            class="btn btn-info hidden"
+            id="resetButton"
+            onClick="resetGame(); return false;"
+          >
+            Reset Game
+          </button>
+        </div>
+      </div>
+      <div id="gameResult" class="text-center"></div>
       <div id="guesses"></div>
     </div>
     <script src="script.js" charset="utf-8"></script>
