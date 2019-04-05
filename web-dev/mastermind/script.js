@@ -9,6 +9,7 @@ var guess2;
 var guess3;
 
 var inputs = document.getElementById("guessInputs");
+var instructions = document.getElementById("instructions");
 var submit = document.getElementById("submitButton");
 var reset = document.getElementById("resetButton");
 var guessesElement = document.getElementById("guesses");
@@ -149,9 +150,11 @@ function addGuessToPage(results) {
 }
 
 function showGameResults(result) {
-  // hide the submit button & show reset
+  // show reset button
   reset.classList.remove("hidden");
+  // hide instructions & submit button
   submit.classList.add("hidden");
+  instructions.classList.add("hidden");
 
   // show the numbers in their order
   document.getElementById("guess0").value = answer[0];
@@ -172,9 +175,11 @@ function showGameResults(result) {
 
 function resetGame() {
   inputs.reset();
-  // hide the reset button & show submit
+  // hide the reset button
   reset.classList.add("hidden");
+  // show submit button & instructions
   submit.classList.remove("hidden");
+  instructions.classList.remove("hidden");
 
   // remove last game's guesses
   guessesElement.innerHTML = "";

@@ -2,6 +2,11 @@
   display: none !important;
 }
 
+#instructions {
+  color: grey;
+  margin-bottom: 20px;
+}
+
 .guess {
   height: 50px;
   width: 50px;
