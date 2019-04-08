@@ -156,8 +156,6 @@ function showGameResults(result) {
     Losing code: gameResultElement.insertAdjacentHTML("beforeend", "<h2>Better luck next time!</h2>");
   */
 
-  // Write if/else statement here.
-
   // show reset button
   reset.classList.remove("hidden");
   // hide instructions & submit button
