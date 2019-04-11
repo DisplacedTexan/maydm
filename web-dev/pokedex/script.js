@@ -10,5 +10,6 @@ function getPokemon() {
 
   fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`)
     .then(res => res.json())
-    .then(pokemon => console.log(pokemon));
+    .then(pokemon => console.log(pokemon))
+    .catch(err => console.log(err));
 }
