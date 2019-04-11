@@ -17,6 +17,7 @@ button {
   border: 1px solid #cdcdcd;
   border-radius: 4px;
   font-size: 0.95rem;
+  margin: 10px 0;
 }
 
 input {
@@ -26,31 +27,6 @@ input {
 button {
   background-color: green;
   color: white;
-}
-
-.PokemonImgs {
-  width: 70%;
-  height: 90%;
-}
-
-.pokemon {
-  display: flex;
-}
-
-.pokemon .number {
-  flex: 0 0 20%;
-}
-
-.pokemon .name {
-  flex: 0 0 30%;
-}
-
-.pokemon .type {
-  flex: 0 0 30%;
-}
-
-.pokemon .height {
-  flex: 0 0 20%;
 }
 
 .Pokedex_copy {
@@ -108,15 +84,15 @@ button {
   bottom: 50px;
 }
 
-.PokedexList {
+#PokemonList {
   text-align: left;
   margin-left: 20%;
   position: relative;
   bottom: 40px;
 }
 
-#PokedexHeight,
-#PokedexWeight {
+#PokemonHeight,
+#PokemonWeight {
   text-align: left;
   position: relative;
   right: 10%;
