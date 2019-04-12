@@ -1,10 +1,11 @@
 /*
-  This function will get the pokemon after the slash. You can run it on the
+  The function below will get the pokemon after the slash. You can run it on the
   browser console to see how it works. It's the same function you will use
   in the getPokemon function. There's some advanced JavaScript here, so it's
-  okay if you don't get what's happening. The main thing to know is that the
-  res is what returns the pokemon; res.json is what turns it into an object;
-  and it's then called pokemon and sent to the showPokemon function.
+  okay if you don't get what's happening. The main thing to know is that
+  "res" is what the server returns (the pokemon); "res.json" is what turns the
+  response into an object; and it's then named "pokemon" and either sent to
+  console.log (as the one below) or to the showPokemon function.
 
   fetch("https://pokeapi.co/api/v2/pokemon/1")
     .then(res => res.json())
@@ -15,8 +16,9 @@
 
 */
 
-// This "listens" for an Enter keypress from the input
+// This "listens" for an Enter keypress from the input.
 var input = document.getElementById("pokemonToGet");
+
 input.addEventListener("keydown", function(e) {
   if (e.keyCode === 13) {
     getPokemon();
