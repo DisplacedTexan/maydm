@@ -258,3 +258,218 @@ function page3() {
   music.playTone(midDb, music.beat(BeatFraction.Half));
   music.playTone(midDb, music.beat(BeatFraction.Half));
 }
+
+function page4() {
+  // first staff
+  music.playTone(midDb, music.beat(BeatFraction.Quarter));
+  music.playTone(midDb, music.beat(BeatFraction.Quarter));
+  music.playTone(midDb, music.beat(BeatFraction.Half));
+  music.playTone(midDb, music.beat(BeatFraction.Half));
+  music.playTone(midDb, music.beat(BeatFraction.Quarter));
+  music.playTone(midDb, music.beat(BeatFraction.Quarter));
+  music.playTone(midDb, music.beat(BeatFraction.Half));
+  music.playTone(midDb, music.beat(BeatFraction.Half));
+  music.playTone(midC, music.beat(BeatFraction.Whole));
+  for (let i = 0; i < 10; i++) {
+    music.playTone(midDb, music.beat(BeatFraction.Half));
+  }
+  music.playTone(midC, music.beat(BeatFraction.Half));
+  music.playTone(midC, music.beat(BeatFraction.Half));
+  music.playTone(midC, music.beat(BeatFraction.Half));
+  music.playTone(midC, music.beat(BeatFraction.Half));
+  music.playTone(midC, music.beat(BeatFraction.Whole));
+  music.rest(music.beat(BeatFraction.Breve));
+  // second staff
+  music.rest(music.beat(BeatFraction.Breve));
+  music.rest(music.beat(BeatFraction.Breve));
+  music.playTone(midG, music.beat(BeatFraction.Half));
+  music.playTone(midC, music.beat(BeatFraction.Half));
+  music.rest(music.beat(BeatFraction.Whole));
+  music.rest(music.beat(BeatFraction.Double));
+  music.playTone(midC, music.beat(BeatFraction.Whole));
+  music.rest(music.beat(BeatFraction.Half));
+  music.playTone(midC, music.beat(BeatFraction.Half));
+  music.playTone(midC, music.beat(BeatFraction.Quarter));
+  music.playTone(midC, music.beat(BeatFraction.Quarter));
+  music.playTone(midC, music.beat(BeatFraction.Half));
+  music.playTone(midC, music.beat(BeatFraction.Whole));
+  // third staff
+  music.playTone(midC, music.beat(BeatFraction.Whole));
+  music.rest(music.beat(BeatFraction.Half));
+  music.playTone(midC, music.beat(BeatFraction.Half));
+  music.playTone(midC, music.beat(BeatFraction.Half));
+  music.playTone(midC, music.beat(BeatFraction.Half));
+  music.playTone(midC, music.beat(BeatFraction.Whole));
+  music.playTone(midC, music.beat(BeatFraction.Whole));
+  music.rest(music.beat(BeatFraction.Half));
+  music.playTone(midC, music.beat(BeatFraction.Half));
+  music.playTone(midC, music.beat(BeatFraction.Half));
+  music.playTone(midC, music.beat(BeatFraction.Half));
+  music.playTone(midC, music.beat(BeatFraction.Whole));
+  music.playTone(midC, music.beat(BeatFraction.Whole));
+  music.rest(music.beat(BeatFraction.Double));
+  music.rest(music.beat(BeatFraction.Whole));
+  // fourth staff
+  for (let j = 0; j < 2; j++) {
+    music.playTone(lowAb, music.beat(BeatFraction.Whole));
+    music.playTone(lowAb, music.beat(BeatFraction.Half));
+    music.playTone(lowAb, music.beat(BeatFraction.Half));
+    music.playTone(lowAb, music.beat(BeatFraction.Double));
+    music.playTone(lowAb, music.beat(BeatFraction.Whole));
+    music.playTone(lowAb, music.beat(BeatFraction.Half));
+    music.playTone(lowAb, music.beat(BeatFraction.Half));
+    music.playTone(lowAb, music.beat(BeatFraction.Double));
+    if (j === 0) {
+      music.playTone(midG, music.beat(BeatFraction.Double));
+      music.playTone(midC, music.beat(BeatFraction.Double));
+      music.playTone(midC, music.beat(BeatFraction.Double));
+      music.playTone(midE, music.beat(BeatFraction.Double));
+    } else {
+      music.playTone(lowG, music.beat(BeatFraction.Whole));
+      music.playTone(lowG, music.beat(BeatFraction.Half));
+      music.playTone(lowG, music.beat(BeatFraction.Half));
+      music.playTone(lowG, music.beat(BeatFraction.Double));
+      music.playTone(lowG, music.beat(BeatFraction.Whole));
+      music.playTone(lowG, music.beat(BeatFraction.Half));
+      music.playTone(lowG, music.beat(BeatFraction.Whole));
+      music.playTone(lowG, music.beat(BeatFraction.Half));
+      music.rest(music.beat(BeatFraction.Whole));
+    }
+  }
+  music.rest(music.beat(BeatFraction.Double));
+  music.playTone(midC, music.beat(BeatFraction.Whole));
+  music.playTone(midG, music.beat(BeatFraction.Whole));
+  music.rest(music.beat(BeatFraction.Double));
+  music.playTone(midC, music.beat(BeatFraction.Whole));
+  music.rest(music.beat(BeatFraction.Whole));
+}
+
+function page5() {
+  // first staff
+  music.rest(music.beat(BeatFraction.Double));
+  music.playTone(midC, music.beat(BeatFraction.Whole));
+  music.playTone(midG, music.beat(BeatFraction.Whole));
+  music.rest(music.beat(BeatFraction.Double));
+  music.playTone(midC, music.beat(BeatFraction.Whole));
+  music.rest(music.beat(BeatFraction.Whole));
+  music.rest(music.beat(BeatFraction.Double));
+  music.playTone(midC, music.beat(BeatFraction.Whole));
+  music.playTone(midG, music.beat(BeatFraction.Whole));
+  music.rest(music.beat(BeatFraction.Double));
+  music.rest(music.beat(BeatFraction.Half));
+  music.playTone(midE, music.beat(BeatFraction.Half));
+  music.rest(music.beat(BeatFraction.Half));
+  music.playTone(midE, music.beat(BeatFraction.Half));
+  // second staff
+  music.playTone(midE, music.beat(BeatFraction.Half));
+  music.playTone(midE, music.beat(BeatFraction.Half));
+  music.playTone(midE, music.beat(BeatFraction.Half));
+  music.playTone(midE, music.beat(BeatFraction.Half));
+  music.rest(music.beat(BeatFraction.Whole));
+  music.playTone(midE, music.beat(BeatFraction.Half));
+  music.playTone(midE, music.beat(BeatFraction.Half));
+  music.playTone(midE, music.beat(BeatFraction.Half));
+  music.playTone(midE, music.beat(BeatFraction.Half));
+  music.playTone(midE, music.beat(BeatFraction.Half));
+  music.playTone(midE, music.beat(BeatFraction.Half));
+  music.rest(music.beat(BeatFraction.Whole));
+  music.rest(music.beat(BeatFraction.Half));
+  music.playTone(midE, music.beat(BeatFraction.Half));
+  music.playTone(midE, music.beat(BeatFraction.Half));
+  music.playTone(midE, music.beat(BeatFraction.Half));
+  music.playTone(midE, music.beat(BeatFraction.Half));
+  music.playTone(midE, music.beat(BeatFraction.Half));
+  music.rest(music.beat(BeatFraction.Whole));
+  music.playTone(midE, music.beat(BeatFraction.Whole));
+  music.playTone(midE, music.beat(BeatFraction.Half));
+  music.playTone(midE, music.beat(BeatFraction.Quarter));
+  music.playTone(midE, music.beat(BeatFraction.Quarter));
+  music.playTone(midE, music.beat(BeatFraction.Whole));
+  music.rest(music.beat(BeatFraction.Double));
+  // third staff
+  for (let i = 0; i < 2; i++) {
+    music.playTone(midG, music.beat(BeatFraction.Half));
+    music.playTone(midG, music.beat(BeatFraction.Quarter));
+    music.playTone(midG, music.beat(BeatFraction.Quarter));
+    music.playTone(midG, music.beat(BeatFraction.Half));
+    music.playTone(midF, music.beat(BeatFraction.Half));
+    music.playTone(midC, music.beat(BeatFraction.Whole));
+    music.playTone(midG, music.beat(BeatFraction.Half));
+    music.playTone(midG, music.beat(BeatFraction.Half));
+  }
+  music.playTone(highC, music.beat(BeatFraction.Half));
+  music.playTone(highC, music.beat(BeatFraction.Quarter));
+  music.playTone(highC, music.beat(BeatFraction.Quarter));
+  music.playTone(highC, music.beat(BeatFraction.Half));
+  music.playTone(midBb, music.beat(BeatFraction.Half));
+  music.rest(music.beat(BeatFraction.Half));
+  music.playTone(midF, music.beat(BeatFraction.Half));
+  music.playTone(midG, music.beat(BeatFraction.Half));
+  music.playTone(midAb, music.beat(BeatFraction.Half));
+  // fourth staff
+  music.playTone(midAb, music.beat(BeatFraction.Whole));
+  music.rest(music.beat(BeatFraction.Whole));
+  music.rest(music.beat(BeatFraction.Half));
+  music.playTone(midF, music.beat(BeatFraction.Half));
+  music.playTone(midG, music.beat(BeatFraction.Half));
+  music.playTone(midAb, music.beat(BeatFraction.Half));
+  music.playTone(midAb, music.beat(BeatFraction.Whole));
+  music.rest(music.beat(BeatFraction.Double));
+  music.playTone(midF, music.beat(BeatFraction.Half));
+  music.playTone(midG, music.beat(BeatFraction.Half));
+  music.playTone(midG, music.beat(BeatFraction.Quarter));
+  music.playTone(midF, music.beat(BeatFraction.Quarter));
+  music.playTone(midE, music.beat(BeatFraction.Half));
+  music.playTone(midE, music.beat(BeatFraction.Double));
+  music.playTone(midE, music.beat(BeatFraction.Whole));
+  music.rest(music.beat(BeatFraction.Double));
+  music.playTone(midF, music.beat(BeatFraction.Half));
+  music.playTone(midG, music.beat(BeatFraction.Half));
+  music.playTone(midAb, music.beat(BeatFraction.Half));
+  music.playTone(midAb, music.beat(BeatFraction.Whole));
+  music.rest(music.beat(BeatFraction.Whole));
+  music.rest(music.beat(BeatFraction.Half));
+  music.playTone(midF, music.beat(BeatFraction.Half));
+  music.playTone(midG, music.beat(BeatFraction.Half));
+  music.playTone(midAb, music.beat(BeatFraction.Half));
+}
+
+function page6() {
+  // first staff
+  music.playTone(midAb, music.beat(BeatFraction.Whole));
+  music.rest(music.beat(BeatFraction.Double));
+  music.playTone(midF, music.beat(BeatFraction.Half));
+  music.playTone(midG, music.beat(BeatFraction.Half));
+  music.playTone(midG, music.beat(BeatFraction.Quarter));
+  music.playTone(midF, music.beat(BeatFraction.Quarter));
+  music.playTone(midE, music.beat(BeatFraction.Half));
+  music.playTone(midE, music.beat(BeatFraction.Double));
+  music.playTone(midE, music.beat(BeatFraction.Whole));
+  music.rest(music.beat(BeatFraction.Breve));
+  music.rest(music.beat(BeatFraction.Whole));
+  music.playTone(midG, music.beat(BeatFraction.Whole));
+  music.playTone(midEb, music.beat(BeatFraction.Double));
+  music.playTone(midEb, music.beat(BeatFraction.Whole));
+  music.playTone(midG, music.beat(BeatFraction.Half));
+  music.playTone(midG, music.beat(BeatFraction.Half));
+  music.playTone(midG, music.beat(BeatFraction.Whole));
+  music.playTone(midG, music.beat(BeatFraction.Half));
+  music.playTone(highC, music.beat(BeatFraction.Half));
+  // second staff
+  music.playTone(highC, music.beat(BeatFraction.Breve));
+  music.rest(music.beat(BeatFraction.Breve));
+  music.rest(music.beat(BeatFraction.Whole));
+  music.playTone(midG, music.beat(BeatFraction.Whole));
+  music.playTone(midEb, music.beat(BeatFraction.Double));
+  music.playTone(midEb, music.beat(BeatFraction.Whole));
+  music.playTone(midG, music.beat(BeatFraction.Half));
+  music.playTone(midG, music.beat(BeatFraction.Half));
+  music.playTone(midG, music.beat(BeatFraction.Whole));
+  music.playTone(midG, music.beat(BeatFraction.Half));
+  music.playTone(highC, music.beat(BeatFraction.Half));
+  music.playTone(highC, music.beat(BeatFraction.Breve));
+  // third staff
+  music.rest(music.beat(BeatFraction.Double));
+  music.playTone(midC, music.beat(BeatFraction.Whole));
+  music.rest(music.beat(BeatFraction.Whole));
+}
