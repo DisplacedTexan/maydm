@@ -423,6 +423,7 @@ function page6() {
   music.playTone(midC, music.beat(BeatFraction.Quarter));
   // second staff
   music.playTone(midE, music.beat(BeatFraction.Breve));
+  music.rest(music.beat(BeatFraction.Breve));
   music.rest(music.beat(BeatFraction.Whole));
   music.playTone(midEb, music.beat(BeatFraction.Whole));
   music.playTone(midC, music.beat(BeatFraction.Half));
@@ -441,6 +442,7 @@ function page6() {
   music.playTone(midC, music.beat(BeatFraction.Quarter));
   music.playTone(midC, music.beat(BeatFraction.Quarter));
   music.playTone(midE, music.beat(BeatFraction.Breve));
+  // third staff
   music.rest(music.beat(BeatFraction.Double));
   music.playTone(midC, music.beat(BeatFraction.Whole));
   music.rest(music.beat(BeatFraction.Whole));
