@@ -1,3 +1,8 @@
+var mammals = [];
+var reptiles = [];
+var birds = [];
+var fish = [];
+
 class Animal {
   constructor(type, legs, noise, color) {
     this.type = type;
@@ -10,6 +15,17 @@ class Animal {
     return this.noise;
   }
 }
+
+/*
+  You've been given the Mammal class. Create classes for Fish, Reptiles, and
+  Birds. Give each class the proper skin type. Think about where you should
+  override the original constructor. (Hint: how many legs to fish have? How
+  about birds?)
+
+  Give each class a method that allows you to add it to add it to the proper
+  array, then once you create an instance of the class (i.e., an animal), use
+  that method to add it to the array.
+*/
 
 class Mammal extends Animal {
   constructor(type, legs, noise, color) {
@@ -57,10 +73,11 @@ class Fish extends Reptile {
   }
 }
 
-var mammals = [];
-var reptiles = [];
-var birds = [];
-var fish = [];
+/*
+  Once you have created all of the classes of animals, create at least two of
+  each type (2 Mammals, 2 Birds, 2 Fish, 2 Reptiles). One example is given for
+  you. You can keep it or make a new animal!
+*/
 
 let elephant = new Mammal("elephant", 4, "trumpet", "gray");
 elephant.addToZoo();
@@ -77,6 +94,9 @@ gorilla.addToZoo();
 let alligator = new Reptile("alligator", 4, "roar", "olive");
 alligator.addToZoo();
 
+let snake = new Reptile("snake", 0, "hiss", "green");
+snake.addToZoo();
+
 let flamingo = new Bird("flamingo", 2, "honk", "pink");
 flamingo.addToZoo();
 
@@ -85,6 +105,9 @@ eagle.addToZoo();
 
 let shark = new Fish("shark", 0, "", "gray");
 shark.addToZoo();
+
+let jellyfish = new Fish("jellyfish", 0, "", "pink");
+jellyfish.addToZoo();
 
 var mammalCount = document.getElementById("mammal-count");
 mammalCount.innerHTML = mammals.length;
